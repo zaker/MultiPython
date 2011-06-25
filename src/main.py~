@@ -29,6 +29,6 @@ while on:
 #    lock framerate
     #clock.tick(30)
 #    draw black rectangle to renew the canvas
-    pygame.draw.rect(screen, (200,0,200), (0, 0, screen.get_width(), screen.get_height()))
+    pygame.draw.rect(screen, (200,200,200), (0, 0, screen.get_width(), screen.get_height()))
 
 
