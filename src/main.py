@@ -3,6 +3,7 @@
 import pygame
 from Input import *
 
+WHITE = (255,255,255)
 #SCREEN_SIZE = (100,100)
 display_size = (400, 400)
 display_flags = 0
@@ -32,6 +33,9 @@ while on:
 #    draw black rectangle to renew the canvas
 	pygame.draw.rect(screen, (200,0,200), (0, 0, screen.get_width(), screen.get_height()))
 	pygame.draw.rect(screen, (0,0,0), (50,50,10,10))
+	pygame.draw.circle(screen,(255,255,255),(screen.get_width() / 2, screen.get_height() / 2),5)
+	pygame.draw.rect(screen, WHITE, ( (screen.get_width() / 2) -5, (screen.get_height() / 2) -5, 10,5))
+	pygame.draw.rect(screen, WHITE, ( (screen.get_width() / 2) -5, (screen.get_height() / 2) -5, 5,10))
 	
 	
 	pygame.display.update()
