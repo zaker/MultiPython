@@ -2,6 +2,7 @@
 
 import pygame
 from Input import *
+from Models.World import *
 
 WHITE = (255,255,255)
 #SCREEN_SIZE = (100,100)
@@ -15,21 +16,23 @@ screen = pygame.display.set_mode(display_size, display_flags)
 pygame.display.set_caption('MultiPython')
 pygame.mouse.set_visible(0)
 
-
+world = World()
 num = 1
 on = True
 #Run Game
 while on:
-	print num 
 	num += 1
 	#inputs
 	input(pygame.event.get())
 	(m1,m2,m3) = pygame.mouse.get_pressed()
 	if m1 == 1 :
+		print "done"
 		on = False
-    #reset values 
+		exit()
+
+	#reset values 
 #    lock framerate
-    #clock.tick(30)
+	#clock.tick(30)			
 #    draw black rectangle to renew the canvas
 	pygame.draw.rect(screen, (200,0,200), (0, 0, screen.get_width(), screen.get_height()))
 	pygame.draw.rect(screen, (0,0,0), (50,50,10,10))
